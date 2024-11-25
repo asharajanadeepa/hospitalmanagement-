@@ -1,0 +1,214 @@
+.content {
+  flex: 1; /* Allows content to take up remaining space */
+  padding-left: 20px; /* Adds space between the content and image */
+}
+
+.home {
+  min-height: 100vh;
+  padding-top: 10rem;
+}
+
+.home .row {
+  display: flex;
+  align-items: right;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.home .row .images img {
+  height: 65vh;
+}
+
+.home .content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.home .content h1 {
+  font-size: 4rem;
+  color: black;
+}
+
+.home .content h1 span {
+  font-size: 4rem;
+  color: rgb(70, 22, 110);
+}
+
+.home .content p {
+  font-size: 1rem;
+  color: black;
+}
+
+.button {
+  height: 3.5rem;
+  width: 15rem;
+  background: rgb(66, 35, 124);
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  border: 0.1rem solid rgb(66, 35, 124);
+}
+
+.button:hover {
+  border: 0.1rem solid rgb(66, 35, 124);
+  background: white;
+  color: rgb(66, 35, 124);
+  letter-spacing: 0.2rem;
+}
+
+.button:focus,
+.button:active {
+  outline: 2px solid rgba(70, 22, 110, 0.7);
+}
+
+.heading {
+  text-align: center;
+  font-size: 4rem;
+  padding: 1rem;
+  padding-top: 8rem;
+  color: rgb(70, 22, 110);
+  letter-spacing: 0.1rem;
+}
+
+.title {
+  text-align: center;
+  padding: 0rem 1rem;
+  font-size: 2.5rem;
+  color: #000;
+  font-weight: 300;
+}
+
+.about {
+  background: linear-gradient(180deg, rgb(246, 244, 247) 20%, #463360 100%);
+}
+
+.about .box-container {
+  padding: 4rem 0;
+}
+
+.about .box-container .box {
+  width: 75%;
+  margin: 4rem auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  background: white;
+}
+
+.about .box-container .box .images {
+  width: 50%;
+  height: 40rem;
+  overflow: hidden;
+}
+
+.about .box-container .box .images img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .box-container .box .content {
+  padding: 2rem;
+}
+
+.about .box-container .box .content h3 {
+  font-size: 3rem;
+  color: black;
+  margin: 0;
+  text-align: center;
+}
+
+.about .box-container .box .content p {
+  font-size: 1.5rem;
+  color: black;
+  padding: 1rem 0;
+  text-align: start;
+}
+
+.about .box-container .box:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Media Queries */
+@media (max-width: 1280px) {
+  header {
+    padding: 14px 2%;
+  }
+
+  .navbar a {
+    padding: 5px 0;
+    margin: 0px 20px;
+  }
+  .row {
+    margin-bottom: 20px; /* Adds vertical spacing between stacked elements */
+  }
+}
+
+@media (max-width: 1280px) {
+  /* Stack image and content vertically on smaller screens */
+  .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .images img {
+    width: 100%; /* Image takes full width on small screens */
+  }
+
+  .content {
+    padding-left: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#a18282, #402c5e);
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  .footer-col.paragraph-col {
+    width: 100%;
+    border-left: none; /* Remove vertical line on small screens */
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#a18282, #402c5e);
+}

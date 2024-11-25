@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jakarta.ee/xml/ns/jakartaee                       https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">  <display-name>HospitalManagement</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>home.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+        <servlet-name>DoctorInsert</servlet-name>
+        <servlet-class>servlet.InsertDoctorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DoctorInsert</servlet-name>
+        <url-pattern>/insert</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>updateDoctor</servlet-name>
+        <servlet-class>servlet.updateDoctorServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>updateDoctor</servlet-name>
+        <url-pattern>/update</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+    	<servlet-name>deleteDoctor</servlet-name>
+    	<servlet-class>servlet.deleteDoctorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+    	<servlet-name>deleteDoctor</servlet-name>
+    	<url-pattern>/delete</url-pattern>
+	</servlet-mapping>
+	
+	
+	         <servlet>
+         <servlet-name>medicineInsert</servlet-name>
+         <servlet-class>servlet.medicineInsert</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         <servlet-name>medicineInsert</servlet-name>
+         <url-pattern>/ainsert</url-pattern>
+         </servlet-mapping>
+         
+          <servlet>
+         <servlet-name>medicineUpdate</servlet-name>
+         <servlet-class>servlet.medicineUpdate</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         <servlet-name>medicineUpdate</servlet-name>
+         <url-pattern>/Update</url-pattern>
+         </servlet-mapping>
+         
+          <servlet>
+         <servlet-name>medicineDelete</servlet-name>
+         <servlet-class>servlet.medicineDelete</servlet-class>
+         </servlet>
+         
+         <servlet-mapping>
+         <servlet-name>medicineDelete</servlet-name>
+         <url-pattern>/adelete</url-pattern>
+         </servlet-mapping>
+</web-app>

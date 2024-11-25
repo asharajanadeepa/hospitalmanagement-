@@ -1,0 +1,664 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.alert {
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+}
+.alert.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+.alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+body {
+  background: linear-gradient(108deg, #2c075f 50%, rgb(142, 137, 145) 100%);
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px;
+  background: #b69eda;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-left: -20px; /* Adjust this value as needed */
+}
+
+.logo i {
+  color: rgb(201, 53, 53);
+  font-size: 55px;
+  margin-right: 3px;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.logout {
+  position: absolute;
+  bottom: 20px; /* Adjust this value as needed */
+}
+
+.header-icons i {
+  margin-right: 2rem;
+  cursor: pointer;
+}
+
+.header-icons .account {
+  width: 170px; /* You can adjust this as necessary */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Change to flex-start */
+  margin-right: 30px;
+}
+
+.header-icons .account img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.header-icons .account h4 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-right: 0;
+  max-width: 80px; /* Set a max-width for the name */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Container */
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Sidebar Section */
+nav {
+  position: relative;
+  height: 100vh;
+  left: 0;
+  background: #1d0c36;
+  width: 280px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  text-align: center;
+  display: flex;
+  margin: 10px 0;
+}
+
+.logo span {
+  font-weight: bold;
+  padding-left: 15px;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  display: table;
+  width: 100%;
+  padding: 10px;
+}
+
+nav .fas {
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+nav a:hover {
+  background: #782ac6;
+}
+
+.active {
+  background: #782ac6;
+}
+
+/* Main Body Section */
+.main-body {
+  width: 100%;
+  padding: 1rem;
+}
+
+.promo_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 1rem;
+  background: rgb(37, 37, 37);
+  position: relative;
+}
+
+.promo-content {
+  flex: 1;
+}
+
+.promo_card img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+  margin-left: 15px;
+}
+
+.promo_card h1,
+.promo_card span,
+.promo_card button {
+  margin: 10px;
+}
+
+.promo_card button {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.divider {
+  height: 100px;
+  width: 2px;
+  background-color: #fff;
+  margin: 20px 20px;
+  align-self: stretch;
+}
+
+.status-selection {
+  display: flex;
+  align-items: center;
+}
+
+.status-selection label {
+  font-size: 16px;
+  margin-right: 10px;
+  color: #fff;
+}
+
+.status-selection input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  accent-color: #923131;
+  cursor: pointer;
+}
+
+.status-selection .status-text {
+  font-size: 20px;
+  color: #fff;
+  margin-left: 5px;
+}
+
+.status-selection input[type="checkbox"]:checked + .status-text {
+  color: #4caf50;
+}
+
+.status-selection input[type="checkbox"]:not(:checked) + .status-text {
+  color: #f44336;
+}
+
+.promo_card button:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.3s;
+}
+
+.promo_card .promo-content {
+  max-width: 60%;
+}
+
+.promo_card .status-selection {
+  min-width: 200px;
+}
+
+.history_lists {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+/* Attendance List Section */
+.attendance {
+  margin-top: 20px;
+  text-transform: capitalize;
+}
+
+.control-panel {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: #a537ff;
+  border: none;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.search-btn i {
+  font-size: 1rem;
+}
+
+.search-btn:hover {
+  background-color: #782ac6;
+}
+
+.add-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #2c2b2e;
+  background: transparent;
+  margin-right: 20%;
+}
+
+.add-btn:hover {
+  background: #12329c;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.attendance-list {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 15px;
+  min-width: 100%;
+  overflow: hidden;
+  border-radius: 5px 5px 0 0;
+}
+
+table thead tr {
+  color: #fff;
+  background: #5c15b9;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #401394;
+}
+
+.table button {
+  padding: 6px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #2c2b2e;
+}
+
+.table .update-btn:hover {
+  background: #176407;
+  color: #fff;
+  transition: 0.5s;
+}
+
+.table .delete-btn:hover {
+  background: #d30808;
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* Modal Styling for Add and Update Modals */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 60%;
+  max-width: 600px;
+  animation: slide-down 0.4s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Close Button for Add Modal */
+.close-button-m {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-button-m:hover,
+.close-button-m:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Close Button for Update Modal */
+.close-button-u {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.close-button-u:hover,
+.close-button-u:focus {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Styles (shared by both modals) */
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Label Styles (shared by both modals) */
+.form-label {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Input Styles (shared by both modals) */
+.form-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus Styles (shared by both modals) */
+.form-input:focus {
+  border-color: #9427c7;
+  outline: none;
+}
+
+/* Button Styles for Add and Update */
+.add-p,
+.update-p {
+  background-color: #471680;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Button Hover Styles for Add and Update */
+.add-p:hover,
+.update-p:hover {
+  background-color: #7b41be;
+}
+
+.modal-content {
+  position: relative;
+  padding: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #333;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: red;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #161414;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#a18282, #402c5e);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .header-icons {
+    margin-top: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  nav {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-body {
+    padding: 1rem 0.5rem;
+  }
+
+  .promo_card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .promo_card img {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .promo_card .promo-content {
+    max-width: 100%;
+  }
+
+  .promo_card .status-selection {
+    min-width: 100%;
+  }
+
+  .control-panel {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-box input {
+    width: 100%;
+  }
+
+  .add-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .attendance-list {
+    padding: 10px 5px;
+  }
+
+  .table {
+    font-size: 12px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+
+  .header-icons i {
+    margin-right: 1rem;
+  }
+
+  .header-icons .account {
+    width: 100px;
+  }
+
+  .promo_card {
+    padding: 0.5rem;
+  }
+
+  .promo_card h1,
+  .promo_card span,
+  .promo_card button {
+    margin: 5px;
+  }
+
+  .promo_card button {
+    padding: 4px 8px;
+  }
+
+  .control-panel {
+    padding: 0.5rem;
+  }
+
+  .search-box input {
+    padding: 8px;
+  }
+
+  .search-btn {
+    padding: 8px 10px;
+  }
+
+  .add-btn {
+    padding: 8px 10px;
+  }
+
+  .attendance-list {
+    padding: 5px;
+  }
+
+  .table th,
+  .table td {
+    padding: 8px 10px;
+  }
+
+  .table button {
+    padding: 4px 10px;
+  }
+}

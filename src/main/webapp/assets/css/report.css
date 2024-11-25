@@ -1,0 +1,106 @@
+.report-request-section {
+  position: relative;
+  background: url("../image/8.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* Fixes the background image */
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+.report-request-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #463360c0; /* Purple transparent overlay */
+  z-index: -1; /* Ensure the overlay is behind the content */
+}
+
+.report-request-section h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.report-request-section p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+/* Report Request Form Styling */
+.report-request-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: linear-gradient(
+    135deg,
+    rgba(77, 39, 128, 0.8),
+    rgba(255, 255, 255, 0.95)
+  );
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.report-request-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Input Fields Styling */
+.personal-info-container {
+  display: flex;
+  gap: 20px; /* Adjust the gap between input fields as needed */
+}
+
+.personal-info-container input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: border-color 0.3s ease;
+  box-shadow: 0 3px 5px rgba(255, 255, 255, 0.05);
+  outline: none;
+}
+
+.personal-info-container input:focus {
+  border-color: #ff0000;
+}
+
+/* Button Styling */
+.send-otp-button {
+  background-color: #ff4d00;
+  color: white;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease;
+  outline: none;
+}
+
+.send-otp-button:hover {
+  background-color: #c83200; /* Darker on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .report-request-form {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .send-otp-button {
+    font-size: 0.9rem;
+  }
+
+  .report-request-section h2 {
+    font-size: 2.5rem;
+  }
+}

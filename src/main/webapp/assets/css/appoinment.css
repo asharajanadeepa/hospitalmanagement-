@@ -1,0 +1,146 @@
+/* Appointment Section Styling */
+.appointment-section {
+  position: relative;
+  background: url("../image/7.jpg") center/cover no-repeat;
+  background-attachment: fixed; /* Fixes the background image */
+  padding: 4rem 2rem;
+  color: white;
+  text-align: center;
+  z-index: 1; /* Ensures content is above the overlay */
+}
+.appointment-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #463360c0; /* Purple transparent overlay */
+  z-index: -1; /* Places the overlay behind the content */
+}
+
+.appointment-section h2,
+.appointment-section p {
+  position: relative; /* Ensures the text stays above the overlay */
+  z-index: 2;
+}
+
+.appointment-section h2 {
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin-bottom: 2rem;
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+}
+
+.appointment-section p {
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.appointment-form {
+  max-width: 600px;
+  margin: 40px auto;
+  background: linear-gradient(
+    135deg,
+    rgba(77, 39, 128, 0.719),
+    rgba(255, 255, 255, 0.932)
+  );
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(49, 45, 110, 0.1);
+}
+
+.title-select {
+  flex: 1 1 auto; /* Allows it to grow and shrink based on available space */
+  max-width: 80px; /* Sets the maximum width to a smaller size */
+}
+
+.appointment-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.title-name-container {
+  display: flex;
+  gap: 20px; /* Space between fields */
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+  margin-bottom: 20px; /* Space below the title-name-container */
+}
+
+.title-select {
+  max-width: 100px; /* Adjusted width for title select */
+}
+
+.appointment-form input,
+.appointment-form textarea,
+.appointment-form select {
+  flex: 1 1 calc(50% - 20px); /* Half width with gap */
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.932);
+  transition: all 0.3s ease;
+}
+
+.appointment-form textarea {
+  flex: 1 1 100%; /* Full width for textarea */
+  height: 150px;
+  resize: none;
+}
+
+.appointment-form input:focus,
+.appointment-form textarea:focus,
+.appointment-form select:focus {
+  border-color: rgb(255, 0, 0);
+}
+
+.appointment-button {
+  background: rgb(66, 35, 124);
+  color: white;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 2px solid rgb(66, 35, 124);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.fname,
+.lname {
+  width: 40%;
+}
+
+.appointment-button:hover {
+  background-color: white;
+  color: rgb(66, 35, 124);
+  border-color: rgb(66, 35, 124);
+  transform: translateY(-3px);
+}
+
+.appointment-button:focus,
+.appointment-button:active {
+  outline: 2px solid rgba(70, 22, 110, 0.7);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .title-name-container {
+    flex-direction: column;
+  }
+
+  .title-select,
+  .fname,
+  .lname {
+    width: 100%;
+  }
+
+  .appointment-form {
+    margin: 20px;
+  }
+}
